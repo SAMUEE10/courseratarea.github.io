@@ -25,14 +25,13 @@ header {
 }
 
 .menu-item:nth-child(3n+1) {
-    clear: left; /* Limpiar cada tercera sección para empezar una nueva fila */
+    clear: left;
 }
 
 .menu-item p {
     margin: 10px 0;
 }
 
-/* Estilos para la región del título de la sección */
 .menu-item .section-title {
     position: absolute;
     top: 10px;
@@ -43,7 +42,6 @@ header {
     margin: 0;
 }
 
-/* Estilos para la vista de tableta */
 @media (max-width: 991px) {
     .menu-item {
         width: 48%;
@@ -55,11 +53,10 @@ header {
     }
 
     .menu-item:nth-child(2n+1) {
-        clear: none; /* No limpiar en tabletas */
+        clear: none;
     }
 }
 
-/* Estilos para la vista móvil */
 @media (max-width: 767px) {
     .menu-item {
         width: 100%;
@@ -67,19 +64,3 @@ header {
     }
 
     .menu-item:nth-child(2n+1) {
-        clear: none; /* No limpiar en móviles */
-    }
-}
-
-/* Colores diferentes para cada sección */
-.menu-item:nth-child(3n+1) {
-    background-color: #ffcc66; /* Amarillo */
-}
-
-.menu-item:nth-child(3n+2) {
-    background-color: #66ccff; /* Azul */
-}
-
-.menu-item:nth-child(3n+3) {
-    background-color: #99ff99; /* Verde */
-}
