@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 4 Solution Starter</title>
+  <script src="SpeakHello.js"></script>
+  <script src="SpeakGoodBye.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Module 4 Solution Starter</h1>
+  <div id="output"></div>
+
+  <script>
+    (function () {
+      var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+      var outputDiv = document.getElementById("output");
+
+      for (var i = 0; i < names.length; i++) {
+        var firstLetter = names[i].charAt(0).toLowerCase();
+        var message;
+
+        if (firstLetter === 'j') {
+          byeSpeaker.speak(names[i]);
+          message = "Good Bye " + names[i];
+        } else {
+          helloSpeaker.speak(names[i]);
+          message = "Hello " + names[i];
+        }
+
+        var paragraph = document.createElement("p");
+        paragraph.textContent = message;
+        outputDiv.appendChild(paragraph);
+      }
+    })();
+  </script>
+</body>
+</html>
